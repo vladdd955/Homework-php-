@@ -1,42 +1,23 @@
 <?php
 
-class Account
-{
-    private int $balance;
-    private string $name;
+require_once "Account.php";
 
-    public function __construct(float $balance, string $name)
-    {
-        $this->balance = $balance;
-        $this->name = $name;
-    }
+$mattAccount = new Account(1000, "Matt ");
+$myAccount = new Account(0, "My account ");
 
+$mattAccount->setWithdrawal(100);
+$myAccount->setBalance(100);
 
-    public function getBalance(): int
-    {
-        return $this->balance;
-    }
-    public function printData()
-    {
-        return "Account: " . $this->name . "Balance: " . $this->getBalance();
-    }
+echo $mattAccount->printData() . "\n";
+echo $myAccount->printData() . "\n";
 
+$A = new Account(100, "first account" );
+$B = new Account(0, "second account");
+$C = new Account(0, "third account");
 
+$A->transfer($A,$B, 50);
+$B->transfer($B, $C, 25);
 
-    public function setWithdrawal($withdrawal): void
-    {
-        $this->balance -= $withdrawal;
-    }
-
-    public function setBalance($newBalance): void
-    {
-        $this->balance += $newBalance;
-    }
-
-    function transfer(Account $from, Account $to, int $howMuch): void
-    {
-        $from->setWithdrawal($howMuch);
-        $to->setBalance($howMuch);
-    }
-
-}
+echo $A->printData() . "\n";
+echo $B->printData() ."\n";
+echo $C->printData() . "\n";
