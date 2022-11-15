@@ -1,6 +1,5 @@
 <?php
 
-
 $board = [
   [" "," "," "],
   [" "," "," "],
@@ -51,30 +50,30 @@ while(true) {
 
             // Rows
     if ($board[0][0] === $board[0][1] && $board[0][0] === $board[0][2] && $board[0][2]  != " ") {
-        echo $currentPlayer . "\n" . "Congratulation you Win in Rows combination \n";
+        echo $currentPlayer . "\n" . "Congratulation you Won a combination of Rows \n";
         break;
     } elseif ($board[1][0] === $board[1][1] && $board[1][0] === $board[1][2] && $board[1][2]  != " ") {
-        echo $currentPlayer . "\n" . "Congratulation you Win in Rows combination \n";
+        echo $currentPlayer . "\n" . "Congratulation you Won a combination of Rows \n";
         break;
     } elseif ($board[2][0] === $board[2][1] && $board[2][0] === $board[2][2] && $board[2][2]  != " ") {
-        echo $currentPlayer . "\n" . "Congratulation you Win in Rows combination \n";
+        echo $currentPlayer . "\n" . "Congratulation you Won a combination of Rows \n";
         break;
                 // Column
     } elseif ($board[0][0] === $board[1][0] && $board[0][0] === $board[2][0] && $board[2][0]  != " ") {
-        echo $currentPlayer . "\n" . "Congratulation you Win in Column combination \n";
+        echo $currentPlayer . "\n" . "Congratulation you Won a combination of Column \n";
         break;
     } elseif ($board[0][1] === $board[1][1] && $board[0][1] === $board[2][1] && $board[2][1]  != " ") {
-        echo $currentPlayer . "\n" . "Congratulation you Win in Column combination \n";
+        echo $currentPlayer . "\n" . "Congratulation you Won a combination of Column \n";
         break;
     } elseif ($board[0][2] === $board[1][2] && $board[0][2] === $board[2][2] && $board[2][2]  != " ") {
-        echo $currentPlayer . "\n" . "Congratulation you Win in Column combination \n";
+        echo $currentPlayer . "\n" . "Congratulation you Won a combination of Column \n";
         break;
                 // Diagonal
     } elseif ($board[0][0] === $board[1][1] && $board[0][0] === $board[2][2] && $board[2][2]  != " ") {
-        echo $currentPlayer . "\n" . "Congratulation you Win in Diagonal combination \n";
+        echo $currentPlayer . "\n" . "Congratulation you Won a combination of Diagonal \n";
         break;
     } elseif ($board[2][0] === $board[1][1] && $board[2][0] === $board[0][2] && $board[0][2]  != " ") {
-        echo $currentPlayer . "\n" . "Congratulation you Win in Diagonal combination \n";
+        echo $currentPlayer . "\n" . "Congratulation you Won a combination of Diagonal \n";
         break;
     }
 
@@ -88,3 +87,6 @@ while(true) {
 
 
 }
+
+
+
